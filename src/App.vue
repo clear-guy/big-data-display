@@ -1,21 +1,26 @@
 <script setup>
-// import { RouterLink, RouterView } from 'vue-router'
+import { provide } from 'vue';
+import * as echarts from 'echarts';
+
+import dark from './assets/dark.json';
+provide('echarts', echarts)
+echarts.registerTheme('dark', dark);
 </script>
 
 <template>
   <header>
-
     <div class="wrapper">
-      <nav>
-        <!-- <RouterLink to="/">Home</RouterLink>
-        <RouterLink to="/about">About</RouterLink> -->
-      </nav>
+      <RouterLink to="/"></RouterLink>
     </div>
   </header>
 
   <RouterView />
 </template>
 
-<style scoped>
-
+<style>
+body {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+}
 </style>
