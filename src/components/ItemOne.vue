@@ -13,7 +13,7 @@ onMounted(() => {
     myChart.setOption({
         animationDuration: 5000,
         tooltip: {
-            trigger: 'item',
+            trigger: 'axis',
             showDelay: 0,
             transitionDuration: 5
         },
